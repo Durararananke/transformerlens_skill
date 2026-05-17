@@ -4,16 +4,6 @@ Reusable TransformerLens modules for mechanistic interpretability workflows: mod
 
 This repository was completed with assistance from Codex.
 
-## 📄 Project Statement
-
-The author and affiliation of this project:
-
-```text
-Project Name: transformerlens-skill
-Author: Durararananke
-Affiliation: College of Cyber Security, Jinan University
-```
-
 ## 🛠️ Installation
 
 ```bash
@@ -135,6 +125,16 @@ vector = extract_steering_vector(
     layer=10,
 )
 text = generate_with_steering(model, "The movie was", vector, layer=10, alpha=1.5, max_new_tokens=30)
+```
+
+## 📄 Project Statement
+
+The author and affiliation of this project:
+
+```text
+Project Name: transformerlens-skill
+Author: Durararananke
+Affiliation: College of Cyber Security, Jinan University
 ```
 
 ## 📚 References
