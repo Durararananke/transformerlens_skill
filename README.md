@@ -1,6 +1,6 @@
 # 🔬 transformerlens-skill
 
-Reusable TransformerLens modules for mechanistic interpretability workflows: model loading, activation caching, causal intervention, gradient attribution, causal tracing, logit-lens decoding, activation steering, and probing utilities for transformer internals.
+Reusable TransformerLens modules for mechanistic interpretability workflows: model loading, activation caching, causal intervention, activation patching, attribution patching, causal tracing, logit-lens, activation steering, and probing utilities for transformer internals.
 
 This repository was completed with assistance from Codex.
 
