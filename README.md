@@ -4,6 +4,16 @@ Reusable TransformerLens modules for mechanistic interpretability workflows: mod
 
 This repository was completed with assistance from Codex.
 
+## 📄 Project Statement
+
+The author and affiliation of this project:
+
+```text
+Project Name: transformerlens-skill
+Author: Durararananke
+Affiliation: College of Cyber Security, Jinan University
+```
+
 ## 🛠️ Installation
 
 ```bash
