@@ -1,10 +1,10 @@
-# transformerlens-skill
+# 🔬 transformerlens-skill
 
 Reusable TransformerLens modules for mechanistic interpretability workflows. The package mirrors the six nnsight-style skill areas in a TransformerLens-native way: model loading, activation caching, patching, attribution patching, causal tracing, logit lens, and activation steering.
 
 This repository was completed with assistance from Codex.
 
-## Installation
+## 🛠️ Installation
 
 ```bash
 uv sync
@@ -29,7 +29,7 @@ python3 -m unittest discover -s tests
 
 All loading goes through `transformerlens_skill.models.load_model()`, which wraps `HookedTransformer.from_pretrained()` and returns `ModelBundle(model, tokenizer, cfg)`.
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```text
 src/transformerlens_skill/
@@ -46,7 +46,7 @@ src/transformerlens_skill/
 
 The package uses a `src/` layout, keeps each workflow in an independent module, and includes dependency-light structure tests under `tests/`.
 
-## Modules
+## 📦 Modules
 
 `nnsight_basics.py` covers TransformerLens fundamentals: `run_with_cache`, named cache filters, core residual/attention/MLP activations, `add_hook` interventions, batched tokenization with `prepend_bos=True`, and backward-gradient caching.
 
@@ -60,7 +60,7 @@ The package uses a `src/` layout, keeps each workflow in an independent module, 
 
 `model_steering.py` implements activation addition and probing: contrastive steering vectors, generation-time ActAdd hooks, multi-hook interventions, attention-head ablation, and sklearn logistic-regression probes.
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Model Loading
 
@@ -134,6 +134,6 @@ vector = extract_steering_vector(
 text = generate_with_steering(model, "The movie was", vector, layer=10, alpha=1.5, max_new_tokens=30)
 ```
 
-## References
+## 📚 References
 
 - Nanda, N. and Bloom, J. "TransformerLens." [https://github.com/TransformerLensOrg/TransformerLens](https://github.com/TransformerLensOrg/TransformerLens)
