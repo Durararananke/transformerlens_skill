@@ -1,4 +1,4 @@
-"""TransformerLens equivalents for basic nnsight-style workflows."""
+"""TransformerLens workflows."""
 
 from __future__ import annotations
 
