@@ -10,8 +10,6 @@ This repository was completed with assistance from Codex.
 uv sync
 ```
 
-The project declares dependencies in `pyproject.toml`; it does not vendor model weights.
-
 ### 🧩 Supported Models
 
 | Model Family | Status |
@@ -20,7 +18,6 @@ The project declares dependencies in `pyproject.toml`; it does not vendor model 
 | 🧠 Qwen 3 | ✅ |
 | ✨ Gemma 3 | ✅ |
 
-All loading goes through `transformerlens_skill.models.load_model()`, which wraps `HookedTransformer.from_pretrained()` and returns `ModelBundle(model, tokenizer, cfg)`.
 
 ## 🗂️ Project Structure
 
@@ -36,8 +33,6 @@ src/transformerlens_skill/
 ├── model_steering.py
 └── py.typed
 ```
-
-The package uses a `src/` layout, keeps each workflow in an independent module, and includes dependency-light structure tests under `tests/`.
 
 ## 📦 Modules
 
