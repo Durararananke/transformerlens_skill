@@ -30,8 +30,7 @@ src/transformerlens_skill/
 ├── attribution_patching.py
 ├── causal_tracing.py
 ├── logit_lens.py
-├── model_steering.py
-└── py.typed
+└── model_steering.py
 ```
 
 ## 📦 Modules
