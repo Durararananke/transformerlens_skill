@@ -2,6 +2,8 @@
 
 Reusable TransformerLens modules for mechanistic interpretability workflows. The package mirrors the six nnsight-style skill areas in a TransformerLens-native way: model loading, activation caching, patching, attribution patching, causal tracing, logit lens, and activation steering.
 
+This repository was completed with assistance from Codex.
+
 ## Installation
 
 ```bash
@@ -10,15 +12,39 @@ uv sync
 
 The project declares dependencies in `pyproject.toml`; it does not vendor model weights. Hugging Face gated models such as Llama 3 and Gemma 3 require accepted licenses and a configured HF token before loading.
 
-## Supported Models
+For local development checks:
 
-| Short name | Family | HuggingFace id | Notes |
-| --- | --- | --- | --- |
-| `llama3` | Llama 3 | `meta-llama/Llama-3.1-8B-Instruct` | RMSNorm, RoPE, GQA, gated MLP |
-| `qwen3` | Qwen 3 | `Qwen/Qwen3-4B-Instruct-2507` | RMSNorm, RoPE, GQA, Q/K norm, gated MLP |
-| `gemma3` | Gemma 3 | `google/gemma-3-4b-it` | RMSNorm, local/global RoPE, local attention, Q/K norm |
+```bash
+python3 -m compileall src tests
+python3 -m unittest discover -s tests
+```
+
+## Supported Model Families
+
+| Short name | Family | Notes |
+| --- | --- | --- |
+| `llama3` | Llama 3 | RMSNorm, RoPE, GQA, gated MLP |
+| `qwen3` | Qwen 3 | RMSNorm, RoPE, GQA, Q/K norm, gated MLP |
+| `gemma3` | Gemma 3 | RMSNorm, local/global RoPE, local attention, Q/K norm |
 
 All loading goes through `transformerlens_skill.models.load_model()`, which wraps `HookedTransformer.from_pretrained()` and returns `ModelBundle(model, tokenizer, cfg)`.
+
+## Project Structure
+
+```text
+src/transformerlens_skill/
+├── models.py
+├── utils.py
+├── nnsight_basics.py
+├── activation_patching.py
+├── attribution_patching.py
+├── causal_tracing.py
+├── logit_lens.py
+├── model_steering.py
+└── py.typed
+```
+
+The package uses a `src/` layout, keeps each workflow in an independent module, and includes dependency-light structure tests under `tests/`.
 
 ## Modules
 
@@ -110,7 +136,4 @@ text = generate_with_steering(model, "The movie was", vector, layer=10, alpha=1.
 
 ## References
 
-- Nanda, N. and Bloom, J. "Transformerlens." TransformerLens library and paper.
-- Meng, K. et al. "Locating and Editing Factual Associations in GPT." ROME.
-- Wang, K. et al. "Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small."
-- Syed, A. et al. "Attribution Patching Outperforms Automated Circuit Discovery."
+- Nanda, N. and Bloom, J. "TransformerLens." [https://github.com/TransformerLensOrg/TransformerLens](https://github.com/TransformerLensOrg/TransformerLens)

@@ -6,6 +6,23 @@ readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "Durarara" }]
 license = { text = "MIT" }
+license-files = ["LICENSE"]
+keywords = [
+    "mechanistic-interpretability",
+    "transformer-lens",
+    "activation-patching",
+    "logit-lens",
+    "model-steering",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
 dependencies = [
     "transformer-lens",
     "torch",
@@ -25,8 +42,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/<your-username>/transformerlens_skill"
-Repository = "https://github.com/<your-username>/transformerlens_skill"
+Homepage = "https://github.com/Durararananke/transformerlens_skill"
+Repository = "https://github.com/Durararananke/transformerlens_skill"
+Issues = "https://github.com/Durararananke/transformerlens_skill/issues"
 
 [build-system]
 requires = ["hatchling"]
@@ -34,3 +52,20 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/transformerlens_skill"]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
