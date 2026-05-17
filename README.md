@@ -25,7 +25,7 @@ uv sync
 src/transformerlens_skill/
 ├── models.py
 ├── utils.py
-├── nnsight_basics.py
+├── basics.py
 ├── activation_patching.py
 ├── attribution_patching.py
 ├── causal_tracing.py
