@@ -10,6 +10,7 @@ from transformer_lens import HookedTransformer
 from transformer_lens.config import HookedTransformerConfig
 from transformers import PreTrainedTokenizerBase
 
+# The registry gives stable family aliases while still allowing full HF ids.
 
 @dataclass(frozen=True)
 class ModelBundle:

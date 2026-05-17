@@ -1,3 +1,4 @@
+# Project metadata for the TransformerLens skill package.
 [project]
 name = "transformerlens-skill"
 version = "0.1.0"

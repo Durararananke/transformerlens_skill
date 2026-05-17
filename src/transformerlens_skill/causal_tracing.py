@@ -20,6 +20,7 @@ from transformerlens_skill.utils import (
     token_probability,
 )
 
+# Causal-tracing routines use explicit hook names to make intervention targets auditable.
 
 def replacement_token_id(model: HookedTransformer) -> int:
     """Choose a neutral token id for subject corruption.

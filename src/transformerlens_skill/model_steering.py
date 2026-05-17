@@ -18,6 +18,7 @@ from transformerlens_skill.utils import PromptLike, ensure_tokens
 
 HookSpec = tuple[str, Any]
 
+# Steering hooks return hook specs so callers can decide when to apply them.
 
 def cached_final_resid_pre(
     model: HookedTransformer,

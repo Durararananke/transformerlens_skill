@@ -15,6 +15,7 @@ from transformer_lens import HookedTransformer
 
 from transformerlens_skill.utils import infer_clean_target_token, logit_diff
 
+# Attribution helpers keep exact patching and gradient approximation workflows separate.
 
 def attribution_hook_names(model: HookedTransformer) -> list[str]:
     """Return canonical hooks used by attribution patching.

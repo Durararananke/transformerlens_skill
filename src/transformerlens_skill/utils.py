@@ -14,6 +14,7 @@ from transformers import PreTrainedTokenizerBase
 
 PromptLike = str | Sequence[str] | Int[Tensor, "batch seq"]
 
+# Shared helpers centralize token, device, and metric conventions across modules.
 
 def get_model_device(model: HookedTransformer) -> torch.device:
     """Return the torch device used by a HookedTransformer.

@@ -14,6 +14,7 @@ from transformer_lens.hook_points import HookPoint
 from transformerlens_skill.models import ModelBundle, inspect_cfg, load_model
 from transformerlens_skill.utils import PromptLike, cfg_summary, ensure_tokens
 
+# Basic examples are written as reusable functions rather than notebook snippets.
 
 def load_and_inspect_model(
     model_name: str,

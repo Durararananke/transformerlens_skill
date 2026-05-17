@@ -14,6 +14,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "src" / "transformerlens_skill"
 
+# These tests avoid importing torch or TransformerLens so they can run in a bare checkout.
 
 class ProjectStructureTest(unittest.TestCase):
     """Validate packaging, module layout, and dependency-light conventions."""

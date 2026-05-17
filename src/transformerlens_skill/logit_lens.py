@@ -15,6 +15,7 @@ from transformers import PreTrainedTokenizerBase
 
 from transformerlens_skill.utils import ensure_tokens
 
+# Logit-lens utilities expose intermediate predictions without mutating model state.
 
 def get_logit_lens_predictions(
     model: HookedTransformer,

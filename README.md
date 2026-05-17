@@ -1,6 +1,6 @@
 # 🔬 transformerlens-skill
 
-Reusable TransformerLens modules for mechanistic interpretability workflows. The package mirrors the six nnsight-style skill areas in a TransformerLens-native way: model loading, activation caching, patching, attribution patching, causal tracing, logit lens, and activation steering.
+Reusable TransformerLens modules for mechanistic interpretability workflows: model loading, activation caching, causal intervention, gradient attribution, causal tracing, logit-lens decoding, activation steering, and probing utilities for transformer internals.
 
 This repository was completed with assistance from Codex.
 
@@ -10,14 +10,7 @@ This repository was completed with assistance from Codex.
 uv sync
 ```
 
-The project declares dependencies in `pyproject.toml`; it does not vendor model weights. Hugging Face gated models such as Llama 3 and Gemma 3 require accepted licenses and a configured HF token before loading.
-
-For local development checks:
-
-```bash
-python3 -m compileall src tests
-python3 -m unittest discover -s tests
-```
+The project declares dependencies in `pyproject.toml`; it does not vendor model weights.
 
 ### 🧩 Supported Models
 

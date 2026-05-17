@@ -14,6 +14,7 @@ from transformer_lens.hook_points import HookPoint
 
 from transformerlens_skill.utils import logit_diff
 
+# Patch helpers are intentionally stateless so experiments can compose hooks safely.
 
 def get_logit_diff(
     logits: Float[Tensor, "batch seq vocab"],

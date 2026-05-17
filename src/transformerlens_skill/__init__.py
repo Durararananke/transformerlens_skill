@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from importlib.metadata import PackageNotFoundError, version
 
+# Keep package-root imports lightweight for metadata and discovery tools.
 try:
     __version__ = version("transformerlens-skill")
 except PackageNotFoundError:
