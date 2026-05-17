@@ -19,13 +19,13 @@ python3 -m compileall src tests
 python3 -m unittest discover -s tests
 ```
 
-## Supported Model Families
+### 🧩 Supported Models
 
-| Short name | Family | Notes |
-| --- | --- | --- |
-| `llama3` | Llama 3 | RMSNorm, RoPE, GQA, gated MLP |
-| `qwen3` | Qwen 3 | RMSNorm, RoPE, GQA, Q/K norm, gated MLP |
-| `gemma3` | Gemma 3 | RMSNorm, local/global RoPE, local attention, Q/K norm |
+| Model Family | Status |
+|--------------|--------|
+| 🦙 Llama 3 | ✅ |
+| 🧠 Qwen 3 | ✅ |
+| ✨ Gemma 3 | ✅ |
 
 All loading goes through `transformerlens_skill.models.load_model()`, which wraps `HookedTransformer.from_pretrained()` and returns `ModelBundle(model, tokenizer, cfg)`.
 
