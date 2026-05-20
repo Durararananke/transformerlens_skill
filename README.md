@@ -35,7 +35,7 @@ src/transformerlens_skill/
 
 ## 📦 Modules
 
-`nnsight_basics.py` covers TransformerLens fundamentals: `run_with_cache`, named cache filters, core residual/attention/MLP activations, `add_hook` interventions, batched tokenization with `prepend_bos=True`, and backward-gradient caching.
+`basics.py` covers TransformerLens fundamentals: `run_with_cache`, named cache filters, core residual/attention/MLP activations, `add_hook` interventions, batched tokenization with `prepend_bos=True`, and backward-gradient caching.
 
 `activation_patching.py` implements the clean-corrupted-patched paradigm used in causal circuit localization. It supports residual stream patches, attention head `hook_z` patches, MLP output patches, full layer-by-position grids, and seaborn heatmaps.
 
